@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #e81cff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+:root {
+    --formBg: #111827;
+    --textclr: #9199a5;
+    --borderclr: #374151;
+    --btnBg: #a78bfa;
+    --gradient1: #e81cff;
+    --gradient2: #40c9ff;
+    --borderRadius: 5px;
+}
+.neha{
+    box-sizing: border-box;
+    border-width: 4px;
+    border-radius: 9px;
+    background: linear-gradient(-45deg,var(--gradient1)0%,var(--gradient2)100%);
+}
+.priya{
+    background-color: #e81cff;
+}

@@ -1,0 +1,23 @@
+
+:root {
+    --formBg: #111827;
+    --textclr: #9199a5;
+    --borderclr: #374151;
+    --btnBg: #a78bfa;
+    --gradient1: #e81cff;
+    --gradient2: #40c9ff;
+    --borderRadius: 5px;
+}
+.about .connect h1 {
+    text-align: center;
+    color: whitesmoke;
+}
+*{
+    background-color: #111827;
+}
+.megha{
+    color: aliceblue;
+}
+h3{
+    color: azure;
+}

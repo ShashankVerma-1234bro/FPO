@@ -1,0 +1,103 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+:root{
+    --formBg: #111827;
+    --textclr: #9199a5;
+    --borderclr:#374151;
+    --btnBg:#a78bfa;
+    --gradient1: #e81cff;
+    --gradient2:#40c9ff;
+    --borderRadius: 5px;
+}
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background-color: black;
+    color:var(--textclr);
+}
+form{
+    width:320px;
+    background-color: var(--formBg);
+    padding:30px;
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+}
+main{
+    background: linear-gradient(-45deg,var(--gradient1)0%,var(--gradient2)100%);
+    border-radius: var(--borderRadius);
+    padding: 5px;
+}
+header{
+    color:white;
+    text-align:center;
+    padding: 5px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+
+}
+input{
+    padding:10px;
+    background-color: transparent;
+    border:none;
+    outline:none;
+    border:1px solid var(--borderclr);
+    border-radius:var(--borderRadius);
+    color:white;
+}
+input:focus{
+    border-color: var(--btnBg);
+}
+.forgot{
+    text-align: end;
+    color:white;
+}
+.forgot span{
+    cursor:pointer;
+}
+button{
+    padding:10px;
+    border: none;
+    border-radius: var(--borderRadius);
+    background-color: var(--btnBg);
+    font-weight: bold;
+    cursor:pointer;
+}
+.or{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+
+}
+.or span{
+    height:2px;
+    width:100%;
+    background-color: var(--borderclr);
+}
+.socials{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap:30px;  
+}
+i{
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+.sign{
+    text-align: center;
+}
+.sign span{
+    color: white;
+    cursor: pointer;
+}

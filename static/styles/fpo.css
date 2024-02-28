@@ -1,0 +1,41 @@
+body{
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    /*background-image: url(./images/Screenshot\ 2024-02-27\ 135400.png);*/
+    background-color: white;
+        color: black;
+}
+
+h2{
+    text-align: center;
+}
+.one{
+    font-size: 20px;
+    font-weight: 100%;
+}
+.two{
+    font-size: 20px;
+}
+.three{
+    font-size: 20px;
+}
+.four{
+    font-size: 20px;
+}
+.five{
+    font-size: 20px;
+}
+.fpo h1 {
+    color:black;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+    
+}
