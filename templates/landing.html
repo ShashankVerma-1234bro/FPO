@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+    <!--Nova Google fonts-->
+    <link href="http://fonts.googleapis.com/css2>family=Nova+Round&display=swap" rel="stylesheet">
+    
+</head>
+<body style="background-image: url(static/images/farming.jpg); background-repeat: no-repeat; background-size: cover;">
+    
+    <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                font-family: roboto;
+            }
+            h1,h2,h3,h4,h5,h6{
+                font-family:'Nova round',cursive;
+            }
+            
+            .wave{
+                position: absolute;
+                width: 100%;
+                bottom: -140px;
+                color: #fff;
+                opacity: 1;
+
+            }
+            header{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 25px 80px;
+                background: linear-gradient(to top,tranparent,rgba(0,0,0,0.6));
+
+            }
+            header .logo{
+                font-size:28px;
+                font-weight: 700;
+                color: #000000;
+                float: left;
+            }
+            header .menu h3{
+                float: right;
+                margin-top: 5px;
+                display: flex;
+                justify-content: end;
+
+            }
+            header ul li{
+                display: inline-block;
+
+            }
+            header ul li a{
+                text-decoration: none;
+                font-size: 16px;
+                color: #000000;
+                margin: 0 25px;
+                font-weight: 300;
+                letter-spacing: 1px;
+            }
+            .content{
+                max-width: 55%;
+                padding: 200px 80px 0;
+                color: #fff;
+
+            }
+            .content h1{
+                font-size: 48px;
+
+
+            }
+            .content p{
+                font-size: 20px;
+                padding: 25px 0;
+                font-weight: 300;
+
+            }
+            .content .btn group{
+                margin-top: 45px;
+
+            }
+            .content a{
+                display: inline-block;
+                padding: 15px 45px;
+                text-decoration: none;
+                color: #fff;
+                border-radius: 50px;
+            }
+            .content a.color1{
+                background-color: #ffc107;
+            }
+            .boxes .box{
+
+                box-sizing: border-box;
+                border-radius: 4px;
+            }
+            .right{
+                position: absolute;
+                right: 100px;
+                top: 20px;
+                color: #fff;
+            }
+            .govt{
+                position: absolute;
+                right: 100px;
+
+
+            }
+            .schemes a:hover{
+                border:2px solid #40c9ff;
+            }
+            .schemes{
+                box-sizing: border-box;
+                border-radius: 8px;
+                border-width:1 px;
+                background-color:#e81cff;
+                color:#a78bfa;
+
+            }
+            :root {
+        --formBg: #111827;
+        --textclr: #9199a5;
+        --borderclr: #374151;
+        --btnBg: #a78bfa;
+        --gradient1: #e81cff;
+        --gradient2: #40c9ff;
+        --borderRadius: 5px;
+            }
+
+
+        </style>
+    
+    <div class="wrap">
+        <header>
+            <div class="logo">Bytefarmers</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="{{url_for('home_page')}}"><h3>Home</h3></a></li>
+                    <li><a href="{{url_for('about_page')}}"><h3>About</h3></a></li>
+                    <li><a href="{{url_for('fpo_page')}}"><h3>FPO'S</h3></a></li>
+                    <li><a href="{{url_for('faqs_page')}}"><h3>FAQ'S</h3></a></li>
+                    <li><a href="{{url_for('market_trends_delhi_page')}}"><h3>Market Trends</h3></a></li>
+                </ul>
+                <div class="right">
+                    <a href="{{url_for('login_page')}}"><h3>Login</h3></a>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <h1>FarmConnect</h1>
+            <div class="govt">
+                <button class="schemes"><a href="{{url_for('schemes_page')}}">Govt Schemes</a></button>
+            </div>
+            <div class="btn-group">
+                <a href="{{url_for('get_started_page')}}" class="color1">Explore More</a>
+                
+            </div>
+            <div class="boxes">
+                <div class="box">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <!--wave-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1" d="M0,288L48,282.7C96,277,192,267,288,218.7C384,171,480,85,576,53.3C672,21,768,43,864,85.3C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+    </div>
+    
+        
+</body>

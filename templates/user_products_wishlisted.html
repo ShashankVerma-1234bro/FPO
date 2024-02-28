@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <!--Material CDN-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--stylesheet-->
+    <link rel="stylesheet" href="static/styles/dashboard.css">
+    
+    <link rel = "stylesheet" href="static/styles/header_section.css">
+    <link rel="stylesheet" href="static/styles/content.css">
+    <link rel="stylesheet" href="static/styles/button.css">
+    <link rel="stylesheet" href="static/styles/logged_account.css">
+</head>
+    
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <image src="static/images/logo.png">
+                    <h2>BYTE <span class="danger">FARMERS</span></h2>
+                </div>
+                <div class="close" id="close btn">
+                    <span class="material-icons-sharp">close</span>  
+                </div>
+            </div>
+            <div class="sidebar">
+                
+                <a href="{{url_for('login_page')}}">
+                    <span class="material-icons-sharp">grid_view</span>
+                        <h3>Dashboard</h3>
+                     </a>
+                
+                <a href="{{url_for('report_page')}}">
+                    <span class="material-icons-sharp">inventory</span>
+                        <h3>Products</h3>
+                     </a>
+                <a href="{{url_for('weather_page')}}">
+                    <span class="material-icons-sharp">inventory</span>
+                        <h3>Weather</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">report_gmailerrorred</span>
+                        <h3>Reports</h3>
+                     </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                        <h3>Settings</h3>
+                     </a>
+                
+                     <a href="{{url_for('home_page')}}">
+                        <span class="material-icons-sharp">logout</span>
+                            <h3>Logout</h3>
+                         </a>
+
+                     </div>
+        </aside>
+        <!--------------------END OF ASIDE---------------------->
+        <main>
+            <h1>Products in your cart</h1>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+
+                <div id="product_1" class="product_group">
+                <div><img src="static/images/farming tools/tractor.jpg"></div>
+                <div class="product_details">
+                    <h2>Tractor for rent</h2>
+                    <p>this is the info about the tractor.</p>
+                    <p>Owner Name: Clark Maxwell</p>
+                    <p>Phone No.: +91 1234567894</p>
+                </div>
+                </div>
+
+                <div id="product_7" class="product_group">
+                    <div><img src="static/images/farming tools/wheelbarrow.jpg"></div>
+                    <div class="product_details">
+                        <h2>Wheelbarrow for rent</h2>
+                        <p>this is the info about the wheelbarrow.</p>
+                        <p>Owner Name: Clark Maxwell</p>
+                        <p>Phone No.: +91 1234567894</p>
+                    </div>
+                </div>
+
+                <div id="product_8" class="product_group">
+                    <div><img src="static/images/farming tools/cultivator.jpg"></div>
+                    <div class="product_details">
+                        <h2>Cultivator for rent</h2>
+                        <p>this is the info about the cultivator.</p>
+                        <p>Owner Name: Clark Maxwell</p>
+                        <p>Phone No.: +91 1234567894</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!---------------------END OF MAIN--------------------->
+        <div class="right">
+            
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <form method="post">
+                            <p>hey, {{user_name}}</p>
+                            <small class="text-muted">Admin</small>
+                        </form>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="static/images/image 1.png">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <script src="static/dashboard.js"></script>
+</body>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Rate Trends</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+
+        button a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        button a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body style="background-image: url(static/images/farming.jpg); background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+        <h2>Market Rate Trends</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Market Rate</th>
+                    <th>Trend</th>
+                    <th>Units</th>
+                </tr>
+            </thead>
+            <tbody id="productData">
+                <!-- Product data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <button><a href="{{url_for('market_trends_haryana_page')}}">Haryana rates</a></button>
+    <button><a href="{{url_for('market_trends_delhi_page')}}">Delhi rates</a></button>
+    <button><a href="{{url_for('market_trends_up_page')}}">Uttar Pradesh rates</a></button>
+    <script>
+        // Hardcoded product data
+        const products = [
+            { name: 'Wheat', rate: '₹58.00', trend: 'Stable',Units:'kg' },
+            { name: 'rice', rate: '₹4200', trend: 'Increasing',Units:'Quintal' },
+            { name: 'Musturd', rate: '₹4550', trend: 'Decreasing',Units:'Quintal' },
+            // Add more products as needed
+        ];  
+
+        // Function to render product data dynamically
+        function renderProducts() {
+            const productTable = document.getElementById('productData');
+            products.forEach(product => {
+                const row = `<tr>
+                                <td>${product.name}</td>
+                                <td>${product.rate}</td>
+                                <td>${product.trend}</td>
+                                <td>${product.Units}</td>
+                            </tr>`;
+                productTable.innerHTML += row;
+            });
+        }
+
+        // Render product data on page load
+        window.onload = renderProducts;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Orders</title>
+    <!--Material CDN-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--stylesheet-->
+    <link rel="stylesheet" href="static/styles/dashboard.css">
+    
+    <link rel = "stylesheet" href="static/styles/header_section.css">
+    <link rel="stylesheet" href="static/styles/content.css">
+    <link rel="stylesheet" href="static/styles/button.css">
+    <link rel="stylesheet" href="static/styles/logged_account.css">
+    
+</head>
+    
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="static/images/logo.png">
+                    <h2>BYTE <span class="danger">FARMERS</span></h2>
+                </div>
+                <div class="close" id="close btn">
+                    <span class="material-icons-sharp">close</span>  
+                </div>
+            </div>
+            <div class="sidebar">
+                
+                <a href="{{url_for('login_page')}}">
+                    <span class="material-icons-sharp">grid_view</span>
+                        <h3>Dashboard</h3>
+                     </a>
+
+                <a href="{{url_for('user_product_page')}}">
+                    <span class="material-icons-sharp">inventory</span>
+                        <h3>Products</h3>
+                </a>
+                <a href="{{url_for('orders_page')}}">
+                    <span class="material-icons-sharp">inventory</span>
+                        <h3>Your Orders</h3>
+                </a>
+                <a href="{{url_for('weather_page')}}">
+                    <span class="material-icons-sharp">inventory</span>
+                        <h3>Weather</h3>
+                     </a>
+                <a href="{{url_for('report_page')}}">
+                    <span class="material-icons-sharp">report_gmailerrorred</span>
+                        <h3>Reports</h3>
+                     </a>
+                <a href="{{url_for('inventory_management_page')}}">
+                    <span class="material-icons-sharp">settings</span>
+                        <h3>Inventory Management</h3>
+                     </a>
+                
+                     <a href="{{url_for('home_page')}}">
+                        <span class="material-icons-sharp">logout</span>
+                            <h3>Logout</h3>
+                         </a>
+
+                     </div>
+        </aside>
+        <!--------------------END OF ASIDE---------------------->
+        <main style="width: 700px;">
+            <h1>Your Orders</h1>
+            <form action="" method="post">
+                <div class = "grid_container">
+                    <div class="grid-item">
+                        <div class="order_list">
+                            <h3>Order no 1</h3>
+                            <p><strong>Item Name - </strong>{{item_name_1}}</p>
+                            <p><strong>Item Price - </strong>{{price_1}}</p>
+                            <p><strong>Buyer's Name - </strong>{{email_id_1}}</p>
+                            <p><strong>Payment Mode - </strong>{{payment_mode_1}}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="order_list">
+                            <h3>Order no 2</h3>
+                            <p><strong>Item Name - </strong>{{item_name_2}}</p>
+                            <p><strong>Item Price - </strong>{{price_2}}</p>
+                            <p><strong>Buyer's Name - </strong>{{email_id_2}}</p>
+                            <p><strong>Payment Mode - </strong>{{payment_mode_2}}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="order_list">
+                            <h3>Order no 3</h3>
+                            <p><strong>Item Name - </strong>{{item_name_3}}</p>
+                            <p><strong>Item Price - </strong>{{price_3}}</p>
+                            <p><strong>Buyer's Name - </strong>{{email_id_3}}</p>
+                            <p><strong>Payment Mode - </strong>{{payment_mode_3}}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="order_list">
+                            <h3>Order no 4</h3>
+                            <p><strong>Item Name - </strong>{{item_name_4}}</p>
+                            <p><strong>Item Price - </strong>{{price_4}}</p>
+                            <p><strong>Buyer's Name - </strong>{{email_id_4}}</p>
+                            <p><strong>Payment Mode - </strong>{{payment_mode_4}}</p>
+                        </div>
+                    </div>
+                    <div class="grid-container">
+                        <div class="order_list">
+                            <h3>Order no 5</h3>
+                            <p><strong>Item Name - </strong>{{item_name_5}}</p>
+                            <p><strong>Item Price - </strong>{{price_5}}</p>
+                            <p><strong>Buyer's Name - </strong>{{email_id_5}}</p>
+                            <p><strong>Payment Mode - </strong>{{payment_mode_5}}</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </form>
+        </main>
+        <!---------------------END OF MAIN--------------------->
+        <div class="right">
+            <div class="top">
+                
+                <div class="profile">
+                    <div class="info">
+                        <p>hey, <b>{{user_name}}</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="static/images/image 1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="static/dashboard.js"></script>
+    
+</body>
+</html>

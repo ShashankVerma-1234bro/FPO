@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .product-details {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .btnn{
+            margin-left: 28rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Details</h1>
+        <div class="product-details">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2023/5/306290637/BE/MT/TO/187752312/iffco-technical-grade-urea.jpeg " alt="Product Image" height="100px" width="100px">
+            
+            <h2>Urea</h2>
+            <p><strong>Description:</strong> Urea is widely used in the agricultural sector both as a fertilizer and animal feed additive. The main function of Urea fertilizer is to provide the plants with nitrogen to promote green leafy growth and make the plants look lush. Urea also aids the photosynthesis process of plants.
+                </p>
+            <p><strong>Price:</strong> ₹20.99</p>
+            <p><strong>Availability:</strong> In Stock</p>
+            <p><strong>Brand:</strong> bytefarmers</p>
+            <p><strong>Category:</strong> Electronic machines</p>
+            <p><strong>Rating:</strong> ★★★★☆</p>
+           
+            <a href="{{url_for('thank_you_page')}}">rent</a>
+            
+        </div>
+    </div>
+    <a href="thankyou.html"><button class="btnn">cash on delivery</button></a><br>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Payment Gateway</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        /* Add some basic styling for demonstration */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        input[type="text"], input[type="number"], input[type="submit"] {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="payment-form">
+        
+        <label for="card-holder-name">Cardholder Name</label>
+        <input type="text" id="card-holder-name">
+        
+        <label for="card-element">Credit or debit card</label>
+        
+        <div id="card-element">
+          <!-- A Stripe Element will be inserted here. -->
+        </div>
+
+        <!-- Used to display form errors. -->
+        <div id="card-errors" role="alert"></div>
+
+        <button type="submit">Submit Payment</button>
+    </form>
+
+    <script>
+        // Set your publishable key: this key works for testing, but replace it with your live publishable key for production
+        var stripe = Stripe('YOUR_PUBLISHABLE_KEY');
+
+        var elements = stripe.elements();
+
+        var style = {
+          base: {
+            fontSize: '16px',
+            color: '#32325d',
+            fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+            fontSmoothing: 'antialiased',
+            '::placeholder': {
+              color: '#aab7c4'
+            }
+          },
+          invalid: {
+            color: '#fa755a',
+            iconColor: '#fa755a'
+          }
+        };
+
+        var card = elements.create('card', {style: style});
+        card.mount('#card-element');
+
+        card.addEventListener('change', function(event) {
+          var displayError = document.getElementById('card-errors');
+          if (event.error) {
+            displayError.textContent = event.error.message;
+          } else {
+            displayError.textContent = '';
+          }
+        });
+
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          stripe.createToken(card).then(function(result) {
+            if (result.error) {
+              // Inform the user if there was an error
+              var errorElement = document.getElementById('card-errors');
+              errorElement.textContent = result.error.message;
+            } else {
+              // Send the token to your server
+              stripeTokenHandler(result.token);
+            }
+          });
+        });
+
+        function stripeTokenHandler(token) {
+          // Insert the token ID into the form so it gets submitted to the server
+          var form = document.getElementById('payment-form');
+          var hiddenInput = document.createElement('input');
+          hiddenInput.setAttribute('type', 'hidden');
+          hiddenInput.setAttribute('name', 'stripeToken');
+          hiddenInput.setAttribute('value', token.id);
+          form.appendChild(hiddenInput);
+
+          // Submit the form
+          form.submit();
+        }
+    </script>
+</body>
+</html>
+

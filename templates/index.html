@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>FPO Home Page</title>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel = "stylesheet" href="static/styles/header_section.css">
+        <link rel="stylesheet" href="static/styles/content.css">
+        <link rel="stylesheet" href="static/styles/button.css">
+    </head>
+    
+    
+    <body style="padding: 0px;
+                 margin: 0px;">
+        
+        <div class="header_section">
+            <div class="left_section">FARMERS</div>
+            
+            <div class="middle_section">
+                <a href="{{url_for('home_page')}}">Home</a>
+                <a href="{{url_for('about_page')}}">About</a>
+                <a href="{{url_for('product_page')}}">Products</a>
+                <a href="{{url_for('faqs_page')}}">FAQs</a>
+            </div>
+            
+            <div class="right_section">
+                <img class = "image" src="static/images/user_account.png">
+                <a href="{{url_for('login_page')}}">Login</a>
+                <a href="{{url_for('register_page')}}">Register</a>
+            </div>
+            
+        </div>
+        
+        <div id="home_section" class="intro_section">
+            
+            <h1 class="headings">Empowering Farmers</h1>
+            <p>Join our Farmers Protest Organisation</p>
+            <div>
+                <button class="get_started_button">Get Started</button>
+                <button class="learn_more_button">Learn More &#8594</button>
+            </div>
+        </div>
+            
+        
+        <div class="bottom_section">
+            <div class="menu_section">
+                <a href="{{url_for('home_page')}}">Home</a>
+                <a href="{{url_for('about_page')}}">About</a>
+                <a href="{{url_for('faqs_page')}}">FAQs</a>
+                <a href="{{url_for('login_page')}}">Login</a>
+            </div>
+            
+            <div class="contact_section">
+                <p>Contact Us:- +91 1234567895</p>
+                <p>Address - 123 Main Street,<br>
+                    Rural Village,<br>
+                    Farmington, State<br>
+                    Country
+                </p>
+                <p>farmersconnect@gmail.com</p>
+            </div>
+            
+            <div class="follow_us_section">
+                <p>Follow us at</p>
+                <img class = "image" src="static/images/x-icon.png">
+            </div>
+        </div>
+        
+    </body>
+</html>

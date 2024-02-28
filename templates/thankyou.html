@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #dedcf5;
+        }
+
+        div {
+            max-width: 400px;
+            margin: auto;
+        }
+
+		button {
+			color: #ffffff;
+			background-color: #2d63c8;
+			font-size: 19px;
+			border: 1px solid #000000;
+			border-radius: 20px;
+			padding: 15px 50px;
+			cursor: pointer
+		}
+		button:hover {
+			color: #2d63c8;
+			background-color: #ffffff;
+		}
+	</style>
+
+<body>
+    <div>
+        <h1>Thank you for your order <br>
+        it will be delivered to you soon.</h1>
+        <a href="{{url_for('inventory_management_page')}}"><button type="button" name="button">Go to Dashboard Page</button></a>
+    </div>
+</body>
+</html>

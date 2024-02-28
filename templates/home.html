@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPO Home Page</title>
+    <link rel="stylesheet" href="static/styles/home.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+
+            <div class="left"><h2>Farmers</h2></div>
+            <div class="middle">
+                <ul>
+                    <li> <a href="{{url_for('home_page')}}"  style="text-decoration: none;">Home</a></li>
+                    <li><a  href="{{url_for('about_page')}}" style="text-decoration: none;">About us</a></li>
+                    <li><a href="{{url_for('fpo_page')}}" >FPO's</a></li>
+                    <li><a href="{{url_for('faqs_page')}}" style="text-decoration: none;">FAQs</a></li>
+                    <li><a href="{{url_for('schemes_page')}}" style="text-decoration: none;">Schemes</a></li>
+                </ul>
+            </div>
+            
+            
+            <div class="end">
+              <ul>
+
+                 <li> <a href="{{url_for('login_page')}}" style="text-decoration: none;">Login</a></li>
+                 <li> <a href="{{url_for('register_page')}}" style="text-decoration: none;">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+       <div class="get">
+           <h1 >Empowering Farmers</h1>
+           <p><h2>Connect with Farmer Producers Organisation</h2></p>
+        
+           <br>
+           <button><a href="{{url_for('get_started_page')}}">Get Started</a></button>
+               
+        </div>
+        
+    </main>
+    
+</body>

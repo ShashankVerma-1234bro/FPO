@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <!--Material CDN-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--stylesheet-->
+    <link rel="stylesheet" href="static/styles/dashboard.css">
+    
+    <link rel = "stylesheet" href="static/styles/header_section.css">
+    <link rel="stylesheet" href="static/styles/content.css">
+    <link rel="stylesheet" href="static/styles/button.css">
+    <link rel="stylesheet" href="static/styles/logged_account.css">
+    
+</head>
+<body class="dark">
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="static/images/logo.png">
+                    <h2>BYTE <span class="danger">FARMERS</span></h2>
+                </div>
+                <div class="close" id="close btn">
+                    <span class="material-icons-sharp">close</span>  
+                </div>
+            </div>
+            <div class="sidebar">
+                
+                <a href="{{url_for('login_page')}}">
+                    <span class="material-icons-sharp">grid_view</span>
+                        <h3>Dashboard</h3>
+                     </a>
+
+                <a href="{{url_for('user_product_page')}}">
+                    <span class="material-icons-sharp">inventory</span>
+                        <h3>Products</h3>
+                </a>
+                <a href="{{url_for('orders_page')}}">
+                    <span class="material-icons-sharp">inventory</span>
+                        <h3>Your Orders</h3>
+                </a>
+                <a href="{{url_for('weather_page')}}">
+                    <span class="material-icons-sharp">inventory</span>
+                        <h3>Weather</h3>
+                     </a>
+                <a href="{{url_for('report_page')}}">
+                    <span class="material-icons-sharp">report_gmailerrorred</span>
+                        <h3>Reports</h3>
+                     </a>
+                <a href="{{url_for('inventory_management_page')}}">
+                    <span class="material-icons-sharp">inventory</span>
+                        <h3>Inventory Management</h3>
+                     </a>
+                
+                     <a href="{{url_for('home_page')}}">
+                        <span class="material-icons-sharp">logout</span>
+                            <h3>Logout</h3>
+                         </a>
+
+                     </div>
+        </aside>
+        <!--------------------END OF ASIDE---------------------->
+        <main style="width: 800px;">
+            <h1>Inventory</h1>
+            <div>
+                <form method="post">
+                    <div>
+                        <h2><strong>Item Name - </strong>{{item_name_1}}</h2>
+                        <p><strong>Item Price - </strong>{{item_price_1}}</p>
+                        <p><strong>Item Description - </strong>{{item_description_1}}</p>
+                        <p><strong>Item Quantity - </strong>30</p>
+                    </div>
+                    <div>
+                        <h2><strong>Item Name - </strong>{{item_name_2}}</h2>
+                        <p><strong>Item Price - </strong>{{item_price_2}}</p>
+                        <p><strong>Item Description - </strong>{{item_description_2}}</p>
+                        <p><strong>Item Quantity - </strong>{{item_quantity_2}}</p>
+                    </div>
+                    <div>
+                        <h2><strong>Item Name - </strong>{{item_name_3}}</h2>
+                        <p><strong>Item Price - </strong>{{item_price_3}}</p>
+                        <p><strong>Item Description - </strong>{{item_description_3}}</p>
+                        <p><strong>Item Quantity - </strong>{{item_quantity_3}}</p>
+                    </div>
+                    <div>
+                        <h2><strong>Item Name - </strong>{{item_name_4}}</h2>
+                        <p><strong>Item Price - </strong>{{item_price_4}}</p>
+                        <p><strong>Item Description - </strong>{{item_description_4}}</p>
+                        <p><strong>Item Quantity - </strong>{{item_quantity_4}}</p>
+                    </div>
+                    <div>
+                        <h2><strong>Item Name - </strong>{{item_name_5}}</h2>
+                        <p><strong>Item Price - </strong>{{item_price_5}}</p>
+                        <p><strong>Item Description - </strong>{{item_description_5}}</p>
+                        <p><strong>Item Quantity - </strong>{{item_quantity_5}}</p>
+                    </div>
+                    <div>
+                        <h2><strong>Item Name - </strong>{{item_name_6}}</h2>
+                        <p><strong>Item Price - </strong>{{item_price_6}}</p>
+                        <p><strong>Item Description - </strong>{{item_description_6}}</p>
+                        <p><strong>Item Quantity - </strong>{{item_quantity_6}}</p>
+                    </div>
+                    <div>
+                        <h2><strong>Item Name - </strong>{{item_name_7}}</h2>
+                        <p><strong>Item Price - </strong>{{item_price_7}}</p>
+                        <p><strong>Item Description - </strong>{{item_description_7}}</p>
+                        <p><strong>Item Quantity - </strong>{{item_quantity_7}}</p>
+                    </div>
+                    <div>
+                        <h2><strong>Item Name - </strong>{{item_name_8}}</h2>
+                        <p><strong>Item Price - </strong>{{item_price_8}}</p>
+                        <p><strong>Item Description - </strong>{{item_description_8}}</p>
+                        <p><strong>Item Quantity - </strong>{{item_quantity_8}}</p>
+                    </div>
+                </form>
+            </div>
+        </main>
+        
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                
+                <div class="profile">
+                    <div class="info">
+                        <p>hey, <b>{{user_name}}</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="static/images/image 1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/dashboard.js"></script>
+    
+</body>
+</html>

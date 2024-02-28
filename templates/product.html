@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="bgg">
+
+<head style="background-color: black;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="static/styles/product.css">
+    
+</head >
+
+<body >
+    <div class="container">
+        <h1><u><b>Our products</b></u></h1>
+        <div class="cart">
+            <div class="product">
+                <img src="https://www.deere.co.in/assets/images/region-1/products/tractors/john-deere-d-series-tractor.jpg"
+                    alt="Product 1">
+                <div class="product-info">
+                    <h2>Tractor</h2>
+                    <p><b>₹1999</b></p>
+                    <p>Tractors are used for plowing, harrowing, and tilling fields to prepare them for planting crops.
+                        They can also be equipped with implements like cultivators and disc harrows to break up soil and
+                        remove weeds.</p>
+                        
+                        <a href="{{url_for('tractor_page')}}"><button style="background-color: aqua; border-radius: 5px; cursor: pointer;">Rent</button></a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://salfordgroup.com/wp-content/uploads/2022/06/2pc-S-Tine-Cultivator-01-640x403.jpg"
+                    alt="Product 2">
+                <div class="product-info">
+                    <h2>Cultivator</h2>
+                    <p><b>₹2499</b></p>
+                    <p>A cultivator is a farm implement commonly used in agriculture for soil cultivation and weed
+                        control. It plays a crucial role in preparing the soil for planting and maintaining crop health.
+                        .</p>
+                    <a href="{{url_for('cultivator_page')}}"><button style="background-color: aqua; border-radius: 5px; cursor: pointer;">Rent</button></a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://bloximages.newyork1.vip.townnews.com/lancasterfarming.com/content/tncms/assets/v3/editorial/6/12/612d5772-f316-11ec-9ffc-f7478a43a9e1/62b49cd6a712b.image.jpg"
+                    alt="Product 3">
+                <div class="product-info">
+                    <h2>Plows</h2>
+                    <p><b>₹2899</b></p>
+                    <p> Plows are used for primary tillage to turn over and break up soil, preparing it for planting crops. There are different types of plows, including moldboard plows, disk plows, and chisel plows, each suited for specific soil types and conditions.</p>
+                    <a href="{{url_for('plow_page')}}"><button style="background-color: aqua; border-radius: 5px; cursor: pointer;">Book</button></a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://cdn.britannica.com/88/126688-050-48DB1DEF/Combine-harvester.jpg"
+                    alt="Product 4">
+                <div class="product-info">
+                    <h2>Harvesters</h2>
+                    <p><b>₹1899</b></p>
+                    <p> Harvesters are machines designed to efficiently gather mature crops from fields. They come in various types depending on the crop being harvested, such as combine harvesters for grains, forage harvesters for silage, and potato harvesters for root crops.</p>
+                    <a href="{{url_for('harvester_page')}}"><button style="background-color: aqua; border-radius: 5px; cursor: pointer;">Rent</button></a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/5/306290637/BE/MT/TO/187752312/iffco-technical-grade-urea.jpeg"
+                    alt="Product 5">
+                <div class="product-info">
+                    <h2>Urea</h2>
+                    <p><b>₹2099</b></p>
+                    <p> Urea is widely used in the agricultural sector both as a fertilizer and animal feed additive. The main function of Urea fertilizer is to provide the plants with nitrogen to promote green leafy growth and make the plants look lush. Urea also aids the photosynthesis process of plants.
+                    </p>
+                    <a href="{{url_for('urea_page')}}"><button style="background-color: aqua; border-radius: 5px; cursor: pointer;">Buy</button></a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://www.unitronregulatory.nl/media/2020/08/wheelbarrow-1-1800x1201.jpg"
+                    alt="Product 6">
+                <div class="product-info">
+                    <h2>WheelBarrow</h2>
+                    <p><b>₹700</b></p>
+                    <p> A wheelbarrow is a small hand-propelled load-bearing vehicle, usually with just one wheel, designed to be pushed and guided by a single person using two handles at the rear.
+                    </p>
+                    <a href="{{url_for('wheelbarrow_page')}}"><button style="background-color: aqua; border-radius: 5px; cursor: pointer;">Buy</button></a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/51U74mfw2iL.jpg"
+                    alt="Product 7">
+                <div class="product-info">
+                    <h2>Shovel</h2>
+                    <p><b>₹500</b></p>
+                    <p> A shovel is a tool used for digging, lifting, and moving bulk materials, such as soil, coal, gravel, snow, sand, or ore. Most shovels are hand tools consisting of a broad blade fixed to a medium-length handle. Shovel blades are usually made of sheet steel or hard plastics and are very strong.
+                    </p>
+                    <a href="{{url_for('shovel_page')}}"><button style="background-color: aqua; border-radius: 5px; cursor: pointer;">Buy</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+            <!-- More products can be added here -->
+        
+</body>

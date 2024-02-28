@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .details {
+            margin-top: 20px;
+        }
+        
+    </style>
+    
+    <div class="container">
+        <h1>Recommended sellers</h1>
+        <div class="details">
+            <h2>Shubham Singh</h2>
+            <p><strong>Age:</strong> 30</p>
+            <p><strong>Gender:</strong> Male</p>
+            
+            <p><strong>Location:</strong>Gurgaon</p>
+            <p><strong>Email:</strong> Shubham@example.com</p>
+            <p><strong>Phone:</strong> +1234567890</p>
+           <div class="pic"> <img src="https://i.pinimg.com/564x/02/e9/f8/02e9f8f4217b21d3e9eb93e8913ac42f.jpg"
+            height="100px"
+            width="100px">
+        </div>
+        </div>
+    
+    
+        <div class="details">
+            <h2>Dushyant</h2>
+            <p><strong>Age:</strong> 30</p>
+            <p><strong>Gender:</strong> Male</p>
+
+            <p><strong>Location:</strong> badhurgadh</p>
+            <p><strong>Email:</strong> dushyant@example.com</p>
+            <p><strong>Phone:</strong> +1234567890</p>
+            <div>
+                <img src="https://i.pinimg.com/736x/76/72/d2/7672d2f0af3ca484747f4d6b9e1f7abd.jpg"
+                height="100px"
+                width="100px"
+            </div>
+        </div>
+        <div>
+            <a href="{{url_for('login_page')}}"><button>Go back to Dashboard</button></a>
+        </div>
+    </div>
+</body>
+    

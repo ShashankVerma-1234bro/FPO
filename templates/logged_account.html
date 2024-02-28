@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>FPO Home Page</title>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel = "stylesheet" href="static/styles/header_section.css">
+        <link rel="stylesheet" href="static/styles/content.css">
+        <link rel="stylesheet" href="static/styles/button.css">
+        <link rel="stylesheet" href="static/styles/logged_account.css">
+    </head>
+    
+    <body style="padding-top: 100px;
+                 margin: 0px;">
+        
+        <div class="header_section">
+            <div class="left_section">FARMERS</div>
+            
+            <div class="middle_section">
+                <a href="{{url_for('home_page')}}">Home</a>
+                <a href="{{url_for('about_page')}}">About</a>
+                <a href="{{url_for('product_page')}}">Products</a>
+                <a href="{{url_for('faqs_page')}}">FAQs</a>
+            </div>
+            
+            <div class="right_section">
+                <img class = "image" src="static/images/user_account.png">
+                <p>Welcome, {{user_name}}<p>
+                <div><a href="{{url_for('home_page')}}" >Logout</a></div>
+            </div>
+                        
+        </div>
+        
+        <div style="align-content: center; font-size: 30px; font-family: fantasy;">Hello there! Welcome to our website, {{user_name}}</div> 
+        
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-content: center;"> 
+            <button onclick="getLocation()" style="width: 100px; max-height: 40px;" >Get Weather Details</button>
+            <p id="demo" style="font-family: monospace;"></p>
+        </div>
+                
+        <script>
+            var x = document.getElementById("demo")
+
+            function getLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+              } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+              }
+            }
+
+            function showPosition(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                // Call the weather API
+                const url = "https://weatherapi-com.p.rapidapi.com/current.json";
+                const querystring = `q=${latitude},${longitude}`;
+                const headers = {
+                    "X-RapidAPI-Key": "1a13c3820bmsh95a7966a03e8e9bp10f91ajsnd6136685c2bf",
+                    "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com"
+                };
+
+                fetch(`${url}?${querystring}`, { headers })
+                    .then(response => response.json())
+                    .then(data => {
+                        const temperature = data.current.temp_c;
+                        const humidity = data.current.humidity;
+                        const location = data.current.name +", "+data.current.region +", " + data.current.country;
+                        const wind_speed = data.current.wind_mph+"(in mph) / "+data.current.wind_kph+"(in kph)";
+                        const wind_degree = data.current.wind_degree;
+                        const wind_direction = data.current.wind_dir;
+                        
+                        x.innerHTML = "Latitude: " + latitude +
+                                      "<br>Longitude: " + longitude +
+                                      /*"<br>Location: " + location +*/
+                                      "<br>Temperature: " + temperature + "°C" +
+                                      "<br>Humidity: " + humidity + "%"+
+                                      "<br>Wind Speed: " + wind_speed +
+                                      "<br>Wind Direction: " + wind_direction +
+                                      "<br>Wind Degree: " + wind_degree+"°";
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        x.innerHTML = "Error fetching weather data.";
+                    });
+                
+            }
+
+            function showError(error) {
+              switch(error.code) {
+                case error.PERMISSION_DENIED:
+                  x.innerHTML = "User denied the request for Geolocation."
+                  break;
+                case error.POSITION_UNAVAILABLE:
+                  x.innerHTML = "Location information is unavailable."
+                  break;
+                case error.TIMEOUT:
+                  x.innerHTML = "The request to get user location timed out."
+                  break;
+                case error.UNKNOWN_ERROR:
+                  x.innerHTML = "An unknown error occurred."
+                  break;
+              }
+            }
+        </script>
+        
+        <div style="display: flex; flex-direction: column; justify-items: space-evenly; align-items: : center; background-color: aquamarine;">
+            <h1 style="margin-left: 30px;">Products you rented</h1>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div id="product_1" class="product_group">
+                <div><img src="static/images/farming tools/tractor.jpg"></div>
+                <div class="product_details">
+                    <h2>Tractor for rent</h2>
+                    <p>this is the info about the tractor.</p>
+                    <p>Owner Name: Clark Maxwell</p>
+                    <p>Phone No.: +91 1234567894</p>
+                </div>
+            </div>
+
+                <div id="product_2" class="product_group">
+                    <div><img src="static/images/farming tools/plough.jpg"></div>
+                    <div class="product_details">
+                        <h2>Plough for rent</h2>
+                        <p>this is the info about the plough.</p>
+                        <p>Owner Name: Clark Maxwell</p>
+                        <p>Phone No.: +91 1234567894</p>
+                    </div>
+                </div>
+
+                <div id="product_3" class="product_group">
+                    <div><img src="static/images/farming tools/shovel.jpg"></div>
+                    <div class="product_details">
+                        <h2>Shovel for rent</h2>
+                        <p>this is the info about the shovel.</p>
+                        <p>Owner Name: Clark Maxwell</p>
+                        <p>Phone No.: +91 1234567894</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

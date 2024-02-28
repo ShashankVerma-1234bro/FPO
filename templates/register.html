@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="static/styles/login_page.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h3>Register in our website</h3><br>
+            <h4>Enter the required details.</h4>
+        </header>
+        <form method="POST">
+            
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h5>{{message}}</h5>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <label for="firstname"></label>
+            <input type="text" id = "firstname" name = "firstname" placeholder="Enter first name">
+            
+            <label for="lastname"></label>
+            <input type="text" id = "lastname" name = "lastname" placeholder="Enter lastname">
+            
+            <label for="emailid"></label>
+            <input type="text" id = "emailid" name="emailid" placeholder="Enter email ID">
+            
+            <label for="password"></label>
+            <input type="password" id = "password" name="password" placeholder="Enter password">
+            
+            <label for="comfirmpassword"></label>
+            <input type="password" id = "confirmpassword" name="confirmpassword" placeholder="Confirm password">
+            
+            <button type="send">Register</button>
+        </form>
+    </main>
+</body>
+
+</html>

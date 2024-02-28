@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #49de87;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            
+        }
+        .jumbotron {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            background-image: url(https://c8.alamy.com/comp/2WG4HPR/fields-hills-flowers-country-landscape-background-2WG4HPR.jpg);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .bddy{
+            background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20240102/pngtree-minimalistic-vector-background-illustration-abstract-farmland-landscape-with-texture-and-ecology-image_13892782.png);
+            background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        }
+        :root {
+        --formBg: #111827;
+        --textclr: #9199a5;
+        --borderclr: #374151;
+        --btnBg: #a78bfa;
+        --gradient1: #e81cff;
+        --gradient2: #40c9ff;
+        --borderRadius: 5px;
+        
+}
+.navv{
+    background-image: url(https://png.pngtree.com/background/20230604/original/pngtree-abstract-colorful-organic-wallpaper-background-dimension-look-generative-ai-vector-picture-image_2873778.jpg);
+}
+.btnns{
+    cursor: pointer;
+    background-color: #1cff2b;
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body class="bddy">
+    <header>
+        <h1>bytefarmers</h1>
+    </header>
+    <nav class="navv">
+        <ul>
+            <li><a href="{{url_for('home_page')}}"><button class="btnns">Home</button></a></li>
+            
+            <li><a href="{{url_for('add_products_page')}}"><button class="btnns">Add product</button></a></li>
+            <li><a href="{{url_for('contact_page')}}"><button class="btnns"> Contact us</button></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Welcome to our organization gateway!</h2>
+            <p>Here you can add different products for farmers such as machines and different type of chemicals </p>
+        </div>
+    </div>
+    
+</body>
+</html>

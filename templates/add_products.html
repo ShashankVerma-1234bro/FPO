@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="hihihi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Ensure the body takes up the full height of the viewport */
+        }
+        
+        form {
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        input[type="text"], input[type="number"], input[type="submit"] {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+        }
+        .wkks {
+            /* Your styling */
+            margin: 10px 20px;
+            max-width: calc(100% / 3 - 50px);
+            text-align: center;
+            border-radius: 12px;
+            padding: 30px 50px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+            cursor: default;
+            background: linear-gradient(-45deg, var(--gradient1) 0%, var(--gradient2) 100%);
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        :root {
+    --formBg: #111827;
+    --textclr: #9199a5;
+    --borderclr: #374151;
+    --btnBg: #a78bfa;
+    --gradient1: #e81cff;
+    --gradient2: #40c9ff;
+    --borderRadius: 5px;
+}  
+.hihihi{
+    background-image: url(addp.jpg);
+    background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+}
+.oo{
+    color: black;
+    text-decoration: solid;
+}
+        .pp {
+            max-width: 500px;
+        }
+
+    </style>
+</head>
+<body style="background-image: url(static/images/farming.jpg); background-repeat: no-repeat; background-size: cover;">
+    <div class="wkks">
+        <form id="add-product-form" method="post">
+            <div style="display: flex; flex-direction: column; align-items:  center;">
+                <label class="oo" for="product-name"><b>Product Name</b></label>
+                <input class="pp" "text" id="product-name" name="product-name">
+            </div>
+            
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label class="oo" for="product-price"><b>Price</b></label>
+                <input class="pp" type="number" id="product-price" name="product-price">
+            </div>
+            
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label class="oo " for="product-description"><b>Description</b></label>
+                <input class="pp" type="text" id="product-description" name="product-description">
+            </div>
+            
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label class="oo " for="product-quantity"><b>Quantity</b></label>
+                <input class="pp" type="text" id="product-quantity" name="product-quantity">
+            </div>
+            
+            <button href="{{url_for('home_page')}}">Add Product</button>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
